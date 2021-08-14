@@ -76,7 +76,6 @@ Elf_Addr reloc_jmpslot(Elf_Addr *where, Elf_Addr target,
 	round(16, align)
 #define	calculate_tls_offset(prev_offset, prev_size, size, align, offset) \
 	round(prev_offset + prev_size, align)
-#define	calculate_tls_end(off, size) 	((off) + (size))
 #define calculate_tls_post_size(align) \
 	round(TLS_TCB_SIZE, align) - TLS_TCB_SIZE
 
