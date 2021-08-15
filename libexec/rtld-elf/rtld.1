@@ -143,6 +143,13 @@ If set,
 .Nm
 will print a table containing all relocations before symbol
 binding and relocation.
+.It Ev LD_DYNAMIC_WEAK
+If set to 0, use the standard symbol lookup behavior: resolve to the first
+definition, regardless of whether it is weak.
+By default the non-standard traditional symbol lookup behavior is used: when a
+weak definition is found, remember the definition and keep searching in the
+remaining shared objects for a non-weak definition. If found, the non-weak
+definition is returned, otherwise the remembered weak definition is returned.
 .It Ev LD_LIBMAP
 A library replacement list in the same format as
 .Xr libmap.conf 5 .
